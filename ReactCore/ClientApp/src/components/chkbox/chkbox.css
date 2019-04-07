@@ -1,0 +1,20 @@
+﻿.chk_box_text {
+  color: black;
+  margin: 10px 10px 10px 10px;
+}
+
+.chk_box_container {
+  padding: 0.5em;
+
+  /**background-color: whitesmoke;*/
+  white-space: nowrap;
+  width: 50%;
+}
+.chk_box_label {
+  margin: 0.2em;
+}
+@media screen and (max-width: 992px) {
+  .chk_box_container {
+    width: 100%;
+  }
+}
