@@ -15,15 +15,15 @@ namespace ReactCore.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            var data = Data.GetVitecDataAsync();
-            return new string[] { "value1", "value2" };
+          // return Data.GetVitecDynamicData("/User/GetUser?UserId=CANVANDARE4AE1UTFRNK2CPKMS&SearchText=StringValue&CustomerId=S31412");
+          return new string[] { "value1", "value2" };
         }
 
         // GET: api/Vitec/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{UserId}/{CustomerId}", Name = "Get")]
+        public string Get(string UserId, string CustomerId)
         {
-            return "value";
+            return Data.GetVitecDynamicData("/User/GetUser?UserId="+ UserId + "&CustomerId="+CustomerId);
         }
 
         // POST: api/Vitec

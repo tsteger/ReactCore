@@ -3,6 +3,7 @@ import { Route } from "react-router";
 import { Layout } from "./components/Layout";
 import { Rubrik } from "./components/header/Rubrik";
 import InspectionForm from "./components/inspectionform";
+import { FetchVitec } from './components/fetchdata/FetchVitec'
 import "./App.css";
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
           <Rubrik rubrik="Best&auml;llningsinformation" />
           <InspectionForm />
         </div>
-        <Route path="/App" component={App} />
+            <Route path="/App" component={App} />
+            <Route path="/FetchVitec" component={FetchVitec} />
       </Layout>
     );
   }

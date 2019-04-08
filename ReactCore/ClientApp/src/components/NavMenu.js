@@ -56,11 +56,11 @@ export class NavMenu extends Component {
                     Home
                   </NavLink>
                 </NavItem>
-                {/* <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/YourLink">
+                 <NavItem>
+                                <NavLink tag={Link} className="text-dark" to="/FetchVitec">
                      Later if ever
                   </NavLink>
-                </NavItem> */}
+                </NavItem> 
               </ul>
             </Collapse>
           </Container>
