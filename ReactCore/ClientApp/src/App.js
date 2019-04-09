@@ -4,6 +4,7 @@ import { Layout } from "./components/Layout";
 import { Rubrik } from "./components/header/Rubrik";
 import InspectionForm from "./components/inspectionform";
 import { FetchVitec } from './components/fetchdata/FetchVitec'
+import { FetchMspecs } from './components/fetchdata/FetchMspecs'
 import "./App.css";
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
         </div>
             <Route path="/App" component={App} />
             <Route path="/FetchVitec" component={FetchVitec} />
+            <Route path="/FetchMspecs" component={FetchMspecs} />
       </Layout>
     );
   }

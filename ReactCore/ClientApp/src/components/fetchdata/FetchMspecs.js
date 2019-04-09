@@ -1,16 +1,14 @@
 ﻿import React, { Component } from 'react';
 
-export class FetchVitec extends Component {
-    static displayName = FetchVitec.name;
+export class FetchMspecs extends Component {
+    static displayName = FetchMspecs.name;
      
     constructor(props) {
         super(props);
         this.state = { data: [], loading: true };
-        const url =  "api/Vitec/User/GetUser/CANVANDARE4AE1UTFRNK2CPKMS/S31412";  // user
-      // const url = "api/Vitec/Office/GetOffice/S31412"; // office
-      //  const url ="api/Vitec/Estate/GetHouse/CMVILLA3Q6QGP1JEJ6T5FFP/S31412"
+        const url = "api/Mspecs";  
+       
         fetch(url)
-            .then(fetchStatusHandler)
             .then(response => response.json())
             .then(data => {
                 this.setState({ data: data, loading: false });
@@ -47,22 +45,14 @@ export class FetchVitec extends Component {
     render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : FetchVitec.renderDataTable(this.state.data);
+            : FetchMspecs.renderDataTable(this.state.data);
 
         return (
             <div>
-                <h1>Vitec Example</h1>
-                <p>Fetching data from the Vitec server. :) </p>
+                <h1>Mspecs Example</h1>
+                <p>Fetching data from the Mspecs server. :) </p>
                 {contents}
             </div>
         );
-    }
-}
-function fetchStatusHandler(response) {
-    if (response.status === 200) {
-        return response;
-    } else {
-        console.log("Error 404");
-        throw new Error('Something went wrong');
     }
 }
